@@ -22,3 +22,9 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+.DS_Store
+
+# Gets created for testing purposes. Don't add it to git.
+Images.xcassets
+MakeAppIcon*
