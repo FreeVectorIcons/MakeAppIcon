@@ -5,7 +5,6 @@ import (
 	"github.com/codegangsta/cli"
 	"github.com/nfnt/resize"
 	"image/png"
-	"io/ioutil"
 	"log"
 	"os"
 	"strconv"
@@ -20,13 +19,18 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "filename",
-			Value: "",
+			Value: "Ex: icon.png",
 			Usage: "PNG icon file of size 1024x1024",
+		},
+		cli.StringFlag{
+			Name:  "outputdir",
+			Value: "Default is current",
+			Usage: "Ouput directory of generated app icons",
 		},
 	}
 
 	app.Action = func(c *cli.Context) {
-		name := "icon-square.png"
+		name := ""
 		if c.NArg() > 0 {
 			name = c.Args()[0]
 		}
@@ -50,15 +54,9 @@ func main() {
 			log.Fatal("iTunesConnect requires app icon to be of size 1024x1024.")
 		}
 
-		// Open contents.json
-		contents_data, err := ioutil.ReadFile("templates/Images.xcassets/AppIcon.appiconset/Contents.json")
-		if err != nil {
-			log.Fatal("Couldn't find Images.xcassets template directory")
-		}
-
-		// Decode json
+		// Decode json from the template
 		var app_icons AppIconContents
-		err = json.Unmarshal(contents_data, &app_icons)
+		err = json.Unmarshal([]byte(APP_ICON_JSON), &app_icons)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -76,7 +74,6 @@ func main() {
 
 		// Save
 		app_icons.Save(".")
-
 	}
 
 	app.Run(os.Args)

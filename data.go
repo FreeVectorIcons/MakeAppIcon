@@ -1,3 +1,7 @@
+package main
+
+const (
+	APP_ICON_JSON = `
 {
   "images" : [
     {
@@ -84,3 +88,6 @@
     "author" : "https://github.com/FreeVectorIcons/MakeAppIcon"
   }
 }
+
+	`
+)

@@ -10,7 +10,8 @@ import (
 	"os"
 )
 
-type AppIconImage struct {
+// App Icon
+type AppIconItem struct {
 	Size     string `json:"size"`
 	Idiom    string `json:"idiom"`
 	Filename string `json:"filename"`
@@ -20,7 +21,7 @@ type AppIconImage struct {
 }
 
 type AppIconContents struct {
-	Images []AppIconImage `json:"images"`
+	Images []AppIconItem `json:"images"`
 	Info   struct {
 		Version int    `json:"version"`
 		Author  string `json:"author"`
