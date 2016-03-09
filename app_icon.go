@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"image"
@@ -55,5 +56,9 @@ func (icon AppIconContents) Save(dir string) {
 	// Copy contents.json
 	contents_file_path := fmt.Sprintf("%s%sContents.json", path, sep)
 	data, err := json.Marshal(icon)
-	ioutil.WriteFile(contents_file_path, data, 0644)
+
+	var out bytes.Buffer
+	json.Indent(&out, []byte(data), "", "  ")
+
+	ioutil.WriteFile(contents_file_path, out.Bytes(), 0644)
 }
