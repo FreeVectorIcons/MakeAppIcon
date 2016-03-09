@@ -66,8 +66,8 @@ func main() {
 			image_info := app_icons.Images[i]
 
 			// Parse scalar size
-			size_x, _ := strconv.Atoi(strings.Split(image_info.Size, "x")[0])
-			scale, _ := strconv.Atoi(strings.Split(image_info.Scale, "x")[0])
+			size_x, _ := strconv.ParseFloat(strings.Split(image_info.Size, "x")[0], 64)
+			scale, _ := strconv.ParseFloat(strings.Split(image_info.Scale, "x")[0], 64)
 
 			app_icons.Images[i].image = resize.Resize(uint(size_x*scale), 0, img, resize.Lanczos3)
 		}
