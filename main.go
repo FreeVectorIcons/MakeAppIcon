@@ -22,11 +22,6 @@ func main() {
 			Value: "Ex: icon.png",
 			Usage: "PNG icon file of size 1024x1024",
 		},
-		cli.StringFlag{
-			Name:  "outputdir",
-			Value: "Default is current",
-			Usage: "Ouput directory of generated app icons",
-		},
 	}
 
 	app.Action = func(c *cli.Context) {
