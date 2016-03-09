@@ -11,6 +11,10 @@ import (
 	"strings"
 )
 
+// Flags
+var filename string
+var shouldInstall bool
+
 func main() {
 	app := cli.NewApp()
 	app.Name = "MakeAppIcon"
@@ -50,25 +54,25 @@ func main() {
 		}
 
 		// Decode json from the template
-		var app_icons AppIconContents
-		err = json.Unmarshal([]byte(APP_ICON_JSON), &app_icons)
+		var appIcons AppIconContents
+		err = json.Unmarshal([]byte(APP_ICON_JSON), &appIcons)
 		if err != nil {
 			log.Fatal(err)
 		}
 
 		// Go thorugh the list of images
-		for i := 0; i < len(app_icons.Images); i++ {
-			image_info := app_icons.Images[i]
+		for i := 0; i < len(appIcons.Images); i++ {
+			imageInfo := appIcons.Images[i]
 
 			// Parse scalar size
-			size_x, _ := strconv.ParseFloat(strings.Split(image_info.Size, "x")[0], 64)
-			scale, _ := strconv.ParseFloat(strings.Split(image_info.Scale, "x")[0], 64)
+			sizeX, _ := strconv.ParseFloat(strings.Split(imageInfo.Size, "x")[0], 64)
+			scale, _ := strconv.ParseFloat(strings.Split(imageInfo.Scale, "x")[0], 64)
 
-			app_icons.Images[i].image = resize.Resize(uint(size_x*scale), 0, img, resize.Lanczos3)
+			appIcons.Images[i].image = resize.Resize(uint(sizeX*scale), 0, img, resize.Lanczos3)
 		}
 
 		// Save
-		app_icons.Save(".")
+		appIcons.Save(".")
 	}
 
 	app.Run(os.Args)
