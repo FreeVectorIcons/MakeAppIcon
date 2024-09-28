@@ -1,0 +1,365 @@
+platforms:
+  - id: ios
+    path: 'output/iOS/'
+    title: 'iOS'
+    sourceIcon: 'assets/appIcon1024.png'    
+    sourceSplash: 'assets/splash4096.png'
+    bundleSpecs:
+      - category: 'icon'
+        path: 'AppIcon.appiconset'
+        prefix: 'Icon'
+        manifest: 'Contents.json'
+        removeAlpha: true
+        maintainAspectRatio: false
+        resizeFromCenter: false
+        imageSet:
+          # iPhone App Icons
+          - filename: 'Icon-20x20@2x.png'
+            scale: 2
+            width: 20
+            height: 20
+            idiom: 'iphone'
+          - filename: 'Icon-20x20@3x.png'
+            scale: 3
+            width: 20
+            height: 20
+            idiom: 'iphone'
+          - filename: 'Icon-29x29@2x.png'
+            scale: 2
+            width: 29
+            height: 29
+            idiom: 'iphone'
+          - filename: 'Icon-29x29@3x.png'
+            scale: 3
+            width: 29
+            height: 29
+            idiom: 'iphone'
+          - filename: 'Icon-40x40@2x.png'
+            scale: 2
+            width: 40
+            height: 40
+            idiom: 'iphone'
+          - filename: 'Icon-40x40@3x.png'
+            scale: 3
+            width: 40
+            height: 40
+            idiom: 'iphone'
+          - filename: 'Icon-60x60@2x.png'
+            scale: 2
+            width: 60
+            height: 60
+            idiom: 'iphone'
+          - filename: 'Icon-60x60@3x.png'
+            scale: 3
+            width: 60
+            height: 60
+            idiom: 'iphone'
+          # iPad App Icons
+          - filename: 'Icon-20x20@1x.png'
+            scale: 1
+            width: 20
+            height: 20
+            idiom: 'ipad'
+          - filename: 'Icon-20x20@2x.png'
+            scale: 2
+            width: 20
+            height: 20
+            idiom: 'ipad'
+          - filename: 'Icon-29x29@1x.png'
+            scale: 1
+            width: 29
+            height: 29
+            idiom: 'ipad'
+          - filename: 'Icon-29x29@2x.png'
+            scale: 2
+            width: 29
+            height: 29
+            idiom: 'ipad'
+          - filename: 'Icon-40x40@1x.png'
+            scale: 1
+            width: 40
+            height: 40
+            idiom: 'ipad'
+          - filename: 'Icon-40x40@2x.png'
+            scale: 2
+            width: 40
+            height: 40
+            idiom: 'ipad'
+          - filename: 'Icon-76x76@1x.png'
+            scale: 1
+            width: 76
+            height: 76
+            idiom: 'ipad'
+          - filename: 'Icon-76x76@2x.png'
+            scale: 2
+            width: 76
+            height: 76
+            idiom: 'ipad'
+          - filename: 'Icon-83.5@2x.png'
+            scale: 1
+            width: 167
+            height: 167
+            idiom: 'ipad'
+          # iOS Marketing Icon
+          - filename: 'Icon-marketing-1024x1024.png'
+            scale: 1
+            width: 1024
+            height: 1024
+            idiom: 'ios-marketing'
+
+  - id: android
+    path: 'output/android'
+    title: 'Android'
+    sourceIcon: 'assets/appIcon1024.png'
+    sourceSplash: 'assets/splash4096.png'
+    bundleSpecs:
+      - category: 'icon'
+        path: null
+        prefix: 'icon'
+        removeAlpha: true
+        maintainAspectRatio: false
+        resizeFromCenter: false
+        imageSet:
+          - filename: 'icon.png'
+            scale: 1
+            width: 96
+            height: 96
+            density: 'drawable'
+          - filename: 'icon.png'
+            scale: 1
+            width: 36
+            height: 36
+            density: 'drawable-ldpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 48
+            height: 48
+            density: 'drawable-mdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 72
+            height: 72
+            density: 'drawable-hdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 96
+            height: 96
+            density: 'drawable-xhdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 144
+            height: 144
+            density: 'drawable-xxhdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 192
+            height: 192
+            density: 'drawable-xxxhdpi'
+
+          # Mipmap launcher icons
+          - filename: 'icon.png'
+            scale: 1
+            width: 36
+            height: 36
+            density: 'mipmap-ldpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 48
+            height: 48
+            density: 'mipmap-mdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 72
+            height: 72
+            density: 'mipmap-hdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 96
+            height: 96
+            density: 'mipmap-xhdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 144
+            height: 144
+            density: 'mipmap-xxhdpi'
+          - filename: 'icon.png'
+            scale: 1
+            width: 192
+            height: 192
+            density: 'mipmap-xxxhdpi'
+
+      - category: 'splash'
+        path: null
+        prefix: 'splashscreen_image'
+        useAlpha: false
+        maintainAspectRatio: true
+        resizeFromCenter: true
+        imageSet:
+          # Portrait splash screens
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 480
+            height: 800
+            density: 'drawable'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 200
+            height: 320
+            density: 'drawable-ldpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 320
+            height: 480
+            density: 'drawable-mdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 480
+            height: 800
+            density: 'drawable-hdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 720
+            height: 1280
+            density: 'drawable-xhdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 960
+            height: 1600
+            density: 'drawable-xxhdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 1280
+            height: 1920
+            density: 'drawable-xxxhdpi'
+
+          # Landscape splash screens
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 800
+            height: 480
+            density: 'drawable-land'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 320
+            height: 200
+            density: 'drawable-land-ldpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 480
+            height: 320
+            density: 'drawable-land-mdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 800
+            height: 480
+            density: 'drawable-land-hdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 1280
+            height: 720
+            density: 'drawable-land-xhdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1
+            width: 1600
+            height: 960
+            density: 'drawable-land-xxhdpi'
+          - filename: 'splashscreen_image.png'
+            scale: 1    
+            width: 1920
+            height: 1280
+            density: 'drawable-land-xxxhdpi'
+
+  - id: windows
+    path: 'output/windows'
+    title: 'Windows Store'
+    sourceIcon: 'assets/appIcon1024.png'
+    sourceSplash: 'assets/splash4096.png'
+    bundleSpecs:
+      - category: 'icon'
+        path: 'icons'
+        prefix: 'iconApplicationIcon'
+        removeAlpha: true
+        maintainAspectRatio: false
+        resizeFromCenter: false
+        imageSet:
+          # Windows Store app icons with various sizes
+          - filename: 'iconApplicationIcon-16x16.png'
+            scale: 1
+            width: 16
+            height: 16
+          - filename: 'iconApplicationIcon-24x24.png'
+            scale: 1
+            width: 24
+            height: 24
+          - filename: 'iconApplicationIcon-30x30.png'
+            scale: 1
+            width: 30
+            height: 30
+          - filename: 'iconApplicationIcon-32x32.png'
+            scale: 1
+            width: 32
+            height: 32
+          - filename: 'iconApplicationIcon-42x42.png'
+            scale: 1
+            width: 42
+            height: 42
+          - filename: 'iconApplicationIcon-48x48.png'
+            scale: 1
+            width: 48
+            height: 48
+          - filename: 'iconApplicationIcon-50x50.png'
+            scale: 1
+            width: 50
+            height: 50
+          - filename: 'iconApplicationIcon-54x54.png'
+            scale: 1
+            width: 54
+            height: 54
+          - filename: 'iconApplicationIcon-70x70.png'
+            scale: 1
+            width: 70
+            height: 70
+          - filename: 'iconApplicationIcon-90x90.png'
+            scale: 1
+            width: 90
+            height: 90
+          - filename: 'iconApplicationIcon-120x120.png'
+            scale: 1
+            width: 120
+            height: 120
+          - filename: 'iconApplicationIcon-150x150.png'
+            scale: 1
+            width: 150
+            height: 150
+          - filename: 'iconApplicationIcon-210x210.png'
+            scale: 1
+            width: 210
+            height: 210
+          - filename: 'iconApplicationIcon-256x256.png'
+            scale: 1
+            width: 256
+            height: 256
+          - filename: 'iconApplicationIcon-270x270.png'
+            scale: 1
+            width: 270
+            height: 270
+      - category: 'splash'
+        path: 'splashscreens'
+        prefix: 'Splashscreen'
+        removeAlpha: false
+        maintainAspectRatio: true
+        resizeFromCenter: true
+        imageSet:
+          # Windows Store splash screen sizes
+          - filename: 'screenSplashscreen-620x300.png'
+            scale: 1
+            width: 620
+            height: 300
+          - filename: 'screenSplashscreen-868x420.png'
+            scale: 1
+            width: 868
+            height: 420
+          - filename: 'screenSplashscreen-1116x540.png'
+            scale: 1
+            width: 1116
+            height: 540
