@@ -27,3 +27,5 @@ _testmain.go
 
 # Gets created for testing purposes. Don't add it to git.
 MakeAppIcon*
+
+output
