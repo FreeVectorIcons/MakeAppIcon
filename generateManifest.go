@@ -43,7 +43,7 @@ func generateManifest(imageSet []FileSpec, manifestPath string) error {
 		Images: images,
 		Info: InfoEntry{
 			Version: 1,
-			Author:  "reactnativepro.com",
+			Author:  "FreeVectorIcons",
 		},
 	}
 

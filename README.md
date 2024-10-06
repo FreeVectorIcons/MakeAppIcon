@@ -30,9 +30,6 @@ Images.xcassets
 
 ```
 
-### Author ###
-* [Hemanta Sapkota](https://twitter.com/ozhemanta) / [Blog](http://hemantasapkota.github.io/) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
-
 ### License ###
 The MIT License (MIT)
 
