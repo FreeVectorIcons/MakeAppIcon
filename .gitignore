@@ -29,3 +29,7 @@ _testmain.go
 MakeAppIcon*
 
 output
+
+resized_scaled_filled_test_output.png
+resized_test_output.png
+test_manifest.json

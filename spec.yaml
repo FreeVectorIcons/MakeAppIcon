@@ -1,9 +1,10 @@
+sourceIcon: 'assets/appIcon1024.png'
+sourceSplash: 'assets/splash4096.png'
+
 platforms:
   - id: ios
     path: 'output/iOS/'
     title: 'iOS'
-    sourceIcon: 'assets/appIcon1024.png'    
-    sourceSplash: 'assets/splash4096.png'
     bundleSpecs:
       - category: 'icon'
         path: 'AppIcon.appiconset'
@@ -95,7 +96,7 @@ platforms:
             width: 76
             height: 76
             idiom: 'ipad'
-          - filename: 'Icon-83.5@2x.png'
+          - filename: 'Icon-83.5x83.5@2x.png'
             scale: 1
             width: 167
             height: 167
@@ -110,8 +111,6 @@ platforms:
   - id: android
     path: 'output/android'
     title: 'Android'
-    sourceIcon: 'assets/appIcon1024.png'
-    sourceSplash: 'assets/splash4096.png'
     bundleSpecs:
       - category: 'icon'
         path: null
@@ -272,8 +271,6 @@ platforms:
   - id: windows
     path: 'output/windows'
     title: 'Windows Store'
-    sourceIcon: 'assets/appIcon1024.png'
-    sourceSplash: 'assets/splash4096.png'
     bundleSpecs:
       - category: 'icon'
         path: 'icons'

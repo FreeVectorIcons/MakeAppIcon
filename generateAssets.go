@@ -14,13 +14,13 @@ func generateAssets(platforms *Platforms) {
 			fmt.Printf(" - Generating %s\n", bundle.Category)
 
 			if platform.ID == "android" {
-				generateAndroidAssets(platform, bundle)
+				generateAndroidAssets(platform, bundle, platforms.SourceIcon, platforms.SourceSplash)
 				continue
 			}
 
-			sourceImageFile := platform.SourceIcon
+			sourceImageFile := platforms.SourceIcon
 			if bundle.Category == "splash" {
-				sourceImageFile = platform.SourceSplash
+				sourceImageFile = platforms.SourceSplash
 			}
 
 			sourceImage, err := openImage(sourceImageFile)

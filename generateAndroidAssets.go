@@ -6,10 +6,10 @@ import (
 	"path/filepath"
 )
 
-func generateAndroidAssets(platform PlatformSpec, bundle BundleSpec) {
-	sourceImageFile := platform.SourceIcon
+func generateAndroidAssets(platform PlatformSpec, bundle BundleSpec, sourceIcon string, sourceSplash string) {
+	sourceImageFile := sourceIcon
 	if bundle.Category == "splash" {
-		sourceImageFile = platform.SourceSplash
+		sourceImageFile = sourceSplash
 	}
 
 	sourceImage, err := openImage(sourceImageFile)
